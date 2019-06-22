@@ -27,7 +27,15 @@ body {font-size:16px;}
     <a href="#newsletter" onclick="w3_close()" class="w3-bar-item w3-button w3-text-white w3-hover-yellow">Newsletter</a>
   </div>
 </nav>
+<!-- TODO 
+    1. Add in logo
+    2. Add in form functionality (google scripts into excel sheet)
+    3. Add in game images.
+    4. Add more content.
 
+
+
+-->
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-light-blue w3-xlarge w3-padding">
@@ -59,12 +67,24 @@ body {font-size:16px;}
   </div>
   
   <!-- GRID SHOWCASE -->
+  <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
-    <div class="w3-half">
-	</div>
-
-    <div class="w3-half">
+    <div class="w3-quarter">
+      <img src="GameTemp.png" style="width:100%" onclick="onClick(this)" alt="borderlands.com">
     </div>
+
+     <div class="w3-quarter">
+      <img src="GameTemp.png" style="width:100%" onclick="onClick(this)" alt="borderlands.com">
+    </div>
+
+    <div class="w3-quarter">
+      <img src="GameTemp.png" style="width:100%" onclick="onClick(this)" alt="borderlands.com">
+    </div>
+
+     <div class="w3-quarter">
+      <img src="GameTemp.png" style="width:100%" onclick="onClick(this)" alt="borderlands.com">
+    </div>
+
   </div>
 
   <!-- Modal for full size images on click-->
@@ -115,7 +135,7 @@ body {font-size:16px;}
     </div>
     <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
-	  <img src="https://cdn.ymaws.com/www.igda.org/graphics/logo.png" style="width:100%">
+	  <img src="Logo-Square.png" style="width:100%">
 		<div class="w3-container">
 		<h3>IGDA - San Diego Chapter</h3>
           <p class="w3-opacity">International Game Developers Association</p>
@@ -162,6 +182,7 @@ function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
+  var link = "<a href=" +  element.alt + ">" + element.alt +"</a>"
   captionText.innerHTML = element.alt;
 }
 </script>
